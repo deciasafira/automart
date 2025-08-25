@@ -1,0 +1,7 @@
+cache/
+deploy/
+dist/
+node_modules/
+reports/
+test/
+~*
