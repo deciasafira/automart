@@ -10,8 +10,12 @@ interface Props extends BoxProps {
 
 const Container = ({ children, ...rest }: Props) => (
   <Box
+    display="flex"
+    flexDirection="column"
+    gap={4}
+    height={640}
     margin="0 auto"
-    maxWidth={{ md: 1236, sm: 720 }}
+    maxWidth={1216}
     paddingX={2}
     paddingY={{ md: 8, sm: 6, xs: 4 }}
     width={1}

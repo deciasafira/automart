@@ -40,29 +40,48 @@ const Main = ({
   });
 
   return (
-    <Box>
-      <AppBar
-        elevation={trigger ? 1 : 0}
-        position="fixed"
-        sx={{
-          backgroundColor: trigger ? '#912210' : 'transparent',
-          top: 0,
-          transition: 'background-color 0.3s ease',
-          zIndex: (theme) => theme.zIndex.drawer + 1
-        }}
-      >
-        <Topbar onSidebarOpen={handleSidebarOpen} />
-      </AppBar>
-      <Sidebar
-        open={open}
-        pages={pages}
-        variant="temporary"
-        onClose={handleSidebarClose} />
-      <main style={{ position: 'relative' }}>
-        {children}
-      </main>
-      <Footer />
+  <Box
+    sx={{
+      display: 'flex',
+      flexDirection: 'column',
+      minHeight: '100vh'
+    }}
+  >
+    {/* Topbar */}
+    <AppBar
+      elevation={trigger ? 1 : 0}
+      position="fixed"
+      sx={{
+        backgroundColor: trigger ? '#F2F7FFB2' : 'transparent',
+        top: 0,
+        transition: 'background-color 0.3s ease',
+        zIndex: (theme) => theme.zIndex.drawer + 1
+      }}
+    >
+      <Topbar onSidebarOpen={handleSidebarOpen} />
+    </AppBar>
+
+    {/* Sidebar */}
+    <Sidebar
+      open={open}
+      pages={pages}
+      variant="temporary"
+      onClose={handleSidebarClose} />
+
+    {/* Content */}
+    <Box
+      component="main"
+      sx={{
+        flex: 1,
+        mt: '64px',
+        position: 'relative'
+      }}
+    >
+      {children}
     </Box>
+
+    <Footer />
+  </Box>
   );
 };
 

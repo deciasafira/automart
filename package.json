@@ -21,6 +21,7 @@
     "@mui/material": "^6.1.1",
     "@nxweb/core": "3.6.0-rc.45",
     "@nxweb/react": "3.6.0-rc.26",
+    "@react-google-maps/api": "^2.20.7",
     "aos": "^2.3.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

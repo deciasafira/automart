@@ -1,0 +1,38 @@
+{
+  "name": "web-automart",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production nextweb build",
+    "clean": "nextweb clean",
+    "config": "nextweb config",
+    "depcheck": "nextweb depcheck --prefer-wanted",
+    "help": "nextweb help",
+    "lint": "nextweb lint",
+    "start": "nextweb start",
+    "test": "nextweb test"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.26.9",
+    "@emotion/cache": "^11.14.0",
+    "@emotion/react": "^11.14.0",
+    "@mui/icons-material": "^6.1.1",
+    "@mui/material": "^6.1.1",
+    "@nxweb/core": "3.6.0-rc.45",
+    "@nxweb/react": "3.6.0-rc.26",
+    "aos": "^2.3.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.2.0"
+  },
+  "devDependencies": {
+    "@nxweb/builder": "3.6.0-rc.56",
+    "@types/aos": "^3.0.7",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "cross-env": "^7.0.3",
+    "favicons": "^7.2.0",
+    "typescript": "^5.7.3"
+  }
+}

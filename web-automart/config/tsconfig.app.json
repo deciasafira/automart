@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "@nxweb/builder/ts/react"
+  ],
+  "include": [
+    "../src",
+    "../test"
+  ]
+}

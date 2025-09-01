@@ -1,19 +1,12 @@
-import { Typography } from '@mui/material';
-
 import type { PageComponent } from '@nxweb/react';
 
+import { HomeView } from '@views/home/view/index.js';
+
 const HomePage: PageComponent = () => {
-  return (
-    <div className="app">
-      <header className="app-header">
-        <Typography variant="h1">
-          HomePage
-        </Typography>
-      </header>
-    </div>
-  );
+  return <HomeView />;
 };
 
 HomePage.displayName = 'HomePage';
-
+HomePage.layout = 'default';
+HomePage.title = 'Beranda';
 export default HomePage;

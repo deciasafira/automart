@@ -120,11 +120,11 @@ const NavItem = ({
                 {p.title}
                 {p.isNew
                   ? <Box
-                    bgcolor="primary.main"
-                    borderRadius={1}
-                    display="inline-flex"
-                    marginLeft={2}
-                    padding={0.5}
+                      bgcolor="primary.main"
+                      borderRadius={1}
+                      display="inline-flex"
+                      marginLeft={2}
+                      padding={0.5}
                   >
                     <Typography
                       sx={{ color: 'common.white', lineHeight: 1 }}

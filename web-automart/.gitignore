@@ -1,0 +1,10 @@
+cache/
+dist/
+reports/
+node_modules/
+.env
+.env.*
+~*
+
+.idea
+.DS_Store

@@ -1,0 +1,8 @@
+{
+  "extends": [
+    "@nxweb/builder/ts/node"
+  ],
+  "include": [
+    "../nextweb.config.ts"
+  ]
+}
