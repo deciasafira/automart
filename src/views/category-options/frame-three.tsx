@@ -41,7 +41,7 @@ const FrameThree: React.FC = () => {
         width: '1440px'
       }}
     >
-      {/* === Stack: Heading + Subheading === */}
+      {/* === Stack: Heading + Subheading == */}
       <Box
         sx={{
           alignItems: 'center',
