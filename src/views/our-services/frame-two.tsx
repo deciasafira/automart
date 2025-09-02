@@ -40,8 +40,6 @@ const FrameTwo: React.FC = () => {
       component="section"
       sx={{
         bgcolor: '#FFFFFF',
-        px: 2,
-        py: { md: 12, xs: 8 },
         textAlign: 'center',
         width: '100%'
       }}
@@ -55,6 +53,7 @@ const FrameTwo: React.FC = () => {
             color: '#2054D5',
             fontSize: 18,
             fontWeight: 500,
+            gap: '20px',
             mb: 4,
             px: 3,
             py: 1
@@ -79,6 +78,7 @@ const FrameTwo: React.FC = () => {
               <Card
                 sx={{
                   boxShadow: 'none',
+                  gap: 3,
                   height: '100%',
                   textAlign: 'left'
                 }}

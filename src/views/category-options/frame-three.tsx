@@ -38,7 +38,7 @@ const FrameThree: React.FC = () => {
         Height: '665px',
         px: '100px',
         py: '80px',
-        width: '1440px'
+        width: '100%'
       }}
     >
       {/* === Stack: Heading + Subheading === */}
@@ -47,11 +47,12 @@ const FrameThree: React.FC = () => {
           alignItems: 'center',
           display: 'flex',
           flexDirection: 'column',
-          gap: '24px',
+          gap: 3,
           height: '117px',
           maxWidth: '700px',
+          mx: 'auto',
           textAlign: 'center',
-          width: '700px'
+          width: '100%'
         }}
       >
         <Typography
@@ -91,13 +92,13 @@ const FrameThree: React.FC = () => {
           alignItems: 'center',
           display: 'flex',
           flexDirection: 'row',
-          gap: '24px',
-          height: '308px',
+          gap: 3,
+          maxHeight: '308px',
           listStyle: 'none',
           m: 0,
           overflowX: 'auto',
           p: 0,
-          width: '1240px'
+          width: '100%'
         }}
       >
         {categories.map((cat, image) => (

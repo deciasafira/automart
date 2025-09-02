@@ -10,40 +10,21 @@ const HeroSection: React.FC = () => {
     <Box
       component="section"
       sx={{
-        bgcolor: '#FFFFFF',
-        height: '866px',
-        overflow: 'visible',
         position: 'relative',
-        width: '1440px'
+        width: '100%',
+        height: '866px',
+        bgcolor: '#FFFFFF',
+        overflow: 'hidden',
+        display: 'flex',
+        alignItems: 'center'
       }}
     >
-      {/* Container */}
-      <Container
-        sx={{
-          alignItems: 'flex-start',
-          display: 'flex',
-          flexDirection: 'row',
-          gap: 32,
-          height: 640,
-          left: 112,
-          position: 'absolute',
-          top: 152,
-          width: 1216,
-          zIndex: 2
-        }}
-      >
-        <Grid container spacing={4}>
+      {/* Content */}
+      <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
+        <Grid container alignItems="center" spacing={4}>
           {/* LEFT CONTENT */}
           <Grid item md={6} xs={12}>
-            <Box
-              sx={{
-                alignItems: 'flex-start',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: 2,
-                maxWidth: 648
-              }}
-            >
+            <Box sx={{ maxWidth: 648, display: 'flex', flexDirection: 'column', gap: 2 }}>
               <Typography
                 sx={{
                   color: '#2E2E2E',
@@ -81,7 +62,7 @@ const HeroSection: React.FC = () => {
                     fontWeight: 600,
                     height: 56,
                     px: 3,
-                    radius: 8,
+                    borderRadius: 2,
                     textTransform: 'none'
                   }}
                   variant="contained"
@@ -91,10 +72,11 @@ const HeroSection: React.FC = () => {
                 <Button
                   startIcon={
                     <Box
-                      alt="Handshake"
                       component="img"
                       src={handshakeIcon}
-                      sx={{ height: 24, width: 24 }} />
+                      alt="Handshake"
+                      sx={{ width: 24, height: 24 }}
+                    />
                   }
                   sx={{
                     border: '2px solid #2054D5',
@@ -116,142 +98,136 @@ const HeroSection: React.FC = () => {
           </Grid>
 
           {/* RIGHT CONTENT */}
-          <Grid item md={6} xs={12}>
+          <Grid item md={6} xs={12} sx={{ textAlign: 'center' }}>
             <Box
+              component="img"
+              src={phoneMockup}
+              alt="Phone Mockup"
               sx={{
-                height: 640,
-                mx: 'auto',
-                position: 'relative',
-                width: 488
+                width: 'auto',
+                maxHeight: '640px',
+                objectFit: 'contain',
+                mx: 'auto'
               }}
-            >
-              <Box
-                alt="Phone Mockup"
-                component="img"
-                src={phoneMockup}
-                sx={{
-                  boxShadow: 'none',
-                  height: 640,
-                  left: 84,
-                  position: 'absolute',
-                  top: 0,
-                  width: 488
-                }} />
-            </Box>
+            />
           </Grid>
         </Grid>
       </Container>
-      {/* Background Blur Layer */}
-      <Box
-        sx={{
-          backdropFilter: 'blur(100px)',
-          bgcolor: 'rgba(242, 247, 255, 0.7)',
-          height: 752,
-          left: 'calc(50% - 1440px/2)',
-          position: 'absolute',
-          top: 'calc(50% - 752px/2 - 64px)',
-          width: 1440,
-          zIndex: 0
-        }} />
 
-      {/* Purple Circle */}
+      {/* Decoration Layer */}
       <Box
         sx={{
-          bgcolor: '#2054D5',
-          borderRadius: '50%',
-          filter: 'blur(120px)',
-          height: 406,
-          left: 1087,
-          opacity: 0.6,
           position: 'absolute',
-          top: -37,
-          width: 406,
+          inset: 0,
           zIndex: 0
-        }} />
+        }}
+      >
+        {/* Background Blur */}
+        <Box
+          sx={{
+            backdropFilter: 'blur(100px)',
+            bgcolor: 'rgba(242, 247, 255, 0.7)',
+            position: 'absolute',
+            top: 'calc(50% - 752px/2 - 64px)',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            width: 1440,
+            height: 752
+          }}
+        />
 
-      {/* Turquoise Circle */}
-      <Box
-        sx={{
-          bgcolor: '#2044AD',
-          borderRadius: '50%',
-          filter: 'blur(80px)',
-          height: 168,
-          left: 829,
-          opacity: 0.6,
-          position: 'absolute',
-          top: 464,
-          width: 168,
-          zIndex: 0
-        }} />
+        {/* Purple Circle */}
+        <Box
+          sx={{
+            position: 'absolute',
+            top: -37,
+            left: 1087,
+            width: 406,
+            height: 406,
+            borderRadius: '50%',
+            bgcolor: '#2054D5',
+            opacity: 0.6,
+            filter: 'blur(120px)'
+          }}
+        />
 
-      {/* Left Bands */}
-      <Box
-        sx={{
-          bgcolor: '#2054D5',
-          height: 116.52,
-          left: 0,
-          opacity: 0.25,
-          position: 'absolute',
-          top: 675.5,
-          transform: 'rotate(-8deg) scaleY(0.52)',
-          transformOrigin: 'center',
-          width: 420,
-          zIndex: 0
-        }} />
-      <Box
-        sx={{
-          bgcolor: '#2054D5',
-          height: 116.52,
-          left: -152,
-          opacity: 0.1,
-          position: 'absolute',
-          top: 758.49,
-          transform: 'rotate(-8deg) scaleY(0.52)',
-          transformOrigin: 'center',
-          width: 420,
-          zIndex: 0
-        }} />
+        {/* Turquoise Circle */}
+        <Box
+          sx={{
+            position: 'absolute',
+            top: 464,
+            left: 829,
+            width: 168,
+            height: 168,
+            borderRadius: '50%',
+            bgcolor: '#2044AD',
+            opacity: 0.6,
+            filter: 'blur(80px)'
+          }}
+        />
 
-      {/* Right Bands */}
-      <Box
-        sx={{
-          bgcolor: '#2054D5',
-          height: 116.52,
-          left: 988,
-          opacity: 0.1,
-          position: 'absolute',
-          top: 448,
-          transform: 'rotate(-8deg) scaleY(0.47)',
-          transformOrigin: 'center',
-          width: 420,
-          zIndex: 0
-        }} />
-      <Box
-        sx={{
-          bgcolor: '#2054D5',
-          height: 140.81,
-          left: 828,
-          opacity: 0.25,
-          position: 'absolute',
-          top: 508,
-          transform: 'rotate(-8deg) scaleY(0.52)',
-          transformOrigin: 'center',
-          width: 612,
-          zIndex: 0
-        }} />
-      <Box
-        sx={{
-          bgcolor: '#2054D5',
-          height: 116.52,
-          left: 1260,
-          opacity: 0.6,
-          position: 'absolute',
-          top: 541.49,
-          transform: 'rotate(-8deg) scaleY(0.53)',
-          transformOrigin: 'center',
-          width: 420,
-          zIndex: 0
-        }} />
+        {/* Left & Right Bands */}
+        <Box
+          sx={{
+            position: 'absolute',
+            top: 675.5,
+            left: 0,
+            width: 420,
+            height: 116.52,
+            bgcolor: '#2054D5',
+            opacity: 0.25,
+            transform: 'rotate(-8deg) scaleY(0.52)'
+          }}
+        />
+        <Box
+          sx={{
+            position: 'absolute',
+            top: 758.49,
+            left: -152,
+            width: 420,
+            height: 116.52,
+            bgcolor: '#2054D5',
+            opacity: 0.1,
+            transform: 'rotate(-8deg) scaleY(0.52)'
+          }}
+        />
+        <Box
+          sx={{
+            position: 'absolute',
+            top: 448,
+            left: 988,
+            width: 420,
+            height: 116.52,
+            bgcolor: '#2054D5',
+            opacity: 0.1,
+            transform: 'rotate(-8deg) scaleY(0.47)'
+          }}
+        />
+        <Box
+          sx={{
+            position: 'absolute',
+            top: 508,
+            left: 828,
+            width: 612,
+            height: 140.81,
+            bgcolor: '#2054D5',
+            opacity: 0.25,
+            transform: 'rotate(-8deg) scaleY(0.52)'
+          }}
+        />
+        <Box
+          sx={{
+            position: 'absolute',
+            top: 541.49,
+            left: 1260,
+            width: 420,
+            height: 116.52,
+            bgcolor: '#2054D5',
+            opacity: 0.6,
+            transform: 'rotate(-8deg) scaleY(0.53)'
+          }}
+        />
+      </Box>
     </Box>
   );
 };
