@@ -43,7 +43,7 @@ const FrameFive: React.FC = () => {
         pb: '120px',
         pt: '80px',
         px: '144px',
-        width: '1440px'
+        width: '100%'
       }}
     >
       {/* === Heading === */}

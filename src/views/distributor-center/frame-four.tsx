@@ -152,7 +152,7 @@ const FrameFour: React.FC = () => {
         height: `${MAP_HEIGHT}px`,
         justifyContent: 'space-between',
         overflow: 'hidden',
-        width: '1440px'
+        width: '100%'
       }}
     >
       {/* === MAP === */}

@@ -17,7 +17,7 @@ const FrameOne: React.FC = () => {
         left: '80px',
         overflow: 'hidden',
         px: '100px',
-        width: '1440px'
+        width: '100%'
       }}
     >
       {/* Left Content */}

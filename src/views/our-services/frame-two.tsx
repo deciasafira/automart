@@ -43,7 +43,7 @@ const FrameTwo: React.FC = () => {
         px: 2,
         py: { md: 12, xs: 8 },
         textAlign: 'center',
-        width: '1440px'
+        width: '100%'
       }}
     >
       <Container maxWidth="lg">

@@ -19,7 +19,7 @@ const FrameSix: React.FC = () => {
         height: '490px',
         overflow: 'hidden',
         position: 'relative',
-        width: '1440px'
+        width: '100%'
       }}
     >
       {/* === Content kiri === */}
