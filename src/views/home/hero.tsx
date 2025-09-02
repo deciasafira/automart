@@ -12,9 +12,9 @@ const HeroSection: React.FC = () => {
       sx={{
         bgcolor: '#FFFFFF',
         height: '866px',
-        overflow: 'visible',
+        overflow: 'hidden',
         position: 'relative',
-        width: '1440px'
+        width: '100%'
       }}
     >
       {/* Container */}

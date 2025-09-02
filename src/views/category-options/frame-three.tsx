@@ -38,10 +38,10 @@ const FrameThree: React.FC = () => {
         Height: '665px',
         px: '100px',
         py: '80px',
-        width: '1440px'
+        width: '100%'
       }}
     >
-      {/* === Stack: Heading + Subheading == */}
+      {/* === Stack: Heading + Subheading === */}
       <Box
         sx={{
           alignItems: 'center',
