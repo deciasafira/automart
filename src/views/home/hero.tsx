@@ -3,7 +3,12 @@ import React from 'react';
 import { Box, Button, Container, Grid, Typography } from '@mui/material';
 
 import handshakeIcon from '@assets/images/Handshake.svg';
-import phoneMockup from '@assets/images/Mobile.svg';
+import phoneMockup from '@assets/images/Phone Mockup.svg';
+import LeftBandOne from '@assets/images/layoutDefault/Left Band 1.svg';
+import LeftBandTwo from '@assets/images/layoutDefault/Left Band 2.svg';
+import RightBandOne from '@assets/images/layoutDefault/Right Band 1.svg';
+import RightBandTwo from '@assets/images/layoutDefault/Right Band 2.svg';
+import RightBandThree from '@assets/images/layoutDefault/Right Band 3.svg';
 
 const HeroSection: React.FC = () => {
   return (
@@ -11,7 +16,8 @@ const HeroSection: React.FC = () => {
       component="section"
       sx={{
         bgcolor: '#FFFFFF',
-        height: '866px',
+        height: { md: '866px', xs: 'auto' },
+        justifyContent: 'center',
         overflow: 'hidden',
         position: 'relative',
         width: '100%'
@@ -22,35 +28,37 @@ const HeroSection: React.FC = () => {
         sx={{
           alignItems: 'flex-start',
           display: 'flex',
-          flexDirection: 'row',
+          flexDirection: { md: 'row', xs: 'column' },
           gap: 32,
-          height: 640,
-          left: 112,
-          position: 'absolute',
-          top: 152,
-          width: 1216,
+          height: { md: 640, xs: '50%' },
+          left: { md: 112, xs: '0%' },
+          position: { md: 'absolute', xs: 'relative' },
+          top: { md: 152, xs: 10 },
+          width: { md: 1216, xs: '100%' },
           zIndex: 2
         }}
       >
-        <Grid container spacing={4}>
+        <Grid alignItems="center" container={true} spacing={4}>
           {/* LEFT CONTENT */}
-          <Grid item md={6} xs={12}>
+          <Grid item={true} md={6} xs={12}>
             <Box
               sx={{
-                alignItems: 'flex-start',
+                alignItems: { md: 'flex-start', xs: 'center' },
                 display: 'flex',
                 flexDirection: 'column',
-                gap: 2,
-                maxWidth: 648
+                gap: { md: 2, xs: 2 },
+                justifyContent: 'center',
+                maxWidth: 648,
+                textAlign: { xs: 'center' }
               }}
             >
               <Typography
                 sx={{
                   color: '#2E2E2E',
-                  fontFamily: 'Open Sauce One',
-                  fontSize: 56,
+                  // FontFamily: 'Open Sauce One',
+                  fontSize: { md: 56, xs: 28 },
                   fontWeight: 800,
-                  lineHeight: '69px'
+                  lineHeight: { md: '69px', xS: '36px' }
                 }}
               >
                 Belanja{' '}
@@ -62,14 +70,12 @@ const HeroSection: React.FC = () => {
               <Typography
                 sx={{
                   color: '#374151',
-                  fontFamily: 'Inter',
-                  fontSize: 18,
+                  fontSize: { md: '18px', xS: '14px' },
                   fontWeight: 400,
-                  lineHeight: '28px'
+                  lineHeight: '100%'
                 }}
               >
-                Automart bantu bengkel dan toko sparepart dapat harga terbaik langsung <br />
-                dari sumbernya. Stok lebih pasti, margin makin untung.
+                Automart bantu bengkel dan toko sparepart dapat harga terbaik langsung dari sumbernya. Stok lebih pasti, margin makin untung.
               </Typography>
 
               {/* CTA Buttons */}
@@ -77,10 +83,10 @@ const HeroSection: React.FC = () => {
                 <Button
                   sx={{
                     bgcolor: '#2054D5',
-                    fontSize: 16,
+                    fontSize: { md: '16px', xS: '14px' },
                     fontWeight: 600,
-                    height: 56,
-                    px: 3,
+                    height: { md: '56', xS: '48px' },
+                    px: { md: 3, xS: 2 },
                     radius: 8,
                     textTransform: 'none'
                   }}
@@ -94,17 +100,17 @@ const HeroSection: React.FC = () => {
                       alt="Handshake"
                       component="img"
                       src={handshakeIcon}
-                      sx={{ height: 24, width: 24 }} />
+                      sx={{ height: { md: 24, xs: 12 }, width: { md: 24, xs: '100%' } }} />
                   }
                   sx={{
                     border: '2px solid #2054D5',
                     borderRadius: 2,
                     color: '#2054D5',
                     fontFamily: 'Inter',
-                    fontSize: 16,
+                    fontSize: { md: '16px', xS: '14px' },
                     fontWeight: 600,
-                    height: 56,
-                    px: 3,
+                    height: { md: '56px', xS: '30px' },
+                    px: { md: 3, xS: 2 },
                     textTransform: 'none'
                   }}
                   variant="outlined"
@@ -116,13 +122,18 @@ const HeroSection: React.FC = () => {
           </Grid>
 
           {/* RIGHT CONTENT */}
-          <Grid item md={6} xs={12}>
+          <Grid item={true} md={6} xs={12}>
             <Box
               sx={{
-                height: 640,
+                alignItems: 'flex-end',
+                display: 'flex',
+                height: { md: 640, xs: 'auto' },
+                left: { xs: 75 },
                 mx: 'auto',
                 position: 'relative',
-                width: 488
+                top: { xs: -90 },
+                transform: 'translate(-45px, 75px)',
+                width: { md: 488, xs: '70%' }
               }}
             >
               <Box
@@ -130,12 +141,8 @@ const HeroSection: React.FC = () => {
                 component="img"
                 src={phoneMockup}
                 sx={{
-                  boxShadow: 'none',
-                  height: 640,
-                  left: 84,
-                  position: 'absolute',
-                  top: 0,
-                  width: 488
+                  height: { md: 640, xs: '50%' },
+                  width: { md: 488, xs: '80%' }
                 }} />
             </Box>
           </Grid>
@@ -186,69 +193,69 @@ const HeroSection: React.FC = () => {
 
       {/* Left Bands */}
       <Box
+        alt="Left Band 1"
+        component="img"
+        src={LeftBandOne}
         sx={{
-          bgcolor: '#2054D5',
           height: 116.52,
           left: 0,
-          opacity: 0.25,
           position: 'absolute',
           top: 675.5,
-          transform: 'rotate(-8deg) scaleY(0.52)',
-          transformOrigin: 'center',
+          transform: 'translate(-5px, 0px)',
           width: 420,
           zIndex: 0
         }} />
       <Box
+        alt="Left Band 2"
+        component="img"
+        src={LeftBandTwo}
         sx={{
-          bgcolor: '#2054D5',
           height: 116.52,
           left: -152,
-          opacity: 0.1,
           position: 'absolute',
           top: 758.49,
-          transform: 'rotate(-8deg) scaleY(0.52)',
-          transformOrigin: 'center',
+          transform: 'translate(0px, 7px)',
           width: 420,
           zIndex: 0
         }} />
 
       {/* Right Bands */}
       <Box
+        alt="Right Band 1"
+        component="img"
+        src={RightBandOne}
         sx={{
-          bgcolor: '#2054D5',
           height: 116.52,
           left: 988,
-          opacity: 0.1,
           position: 'absolute',
           top: 448,
-          transform: 'rotate(-8deg) scaleY(0.47)',
-          transformOrigin: 'center',
+          transform: 'translate(-170px, 26px)',
           width: 420,
           zIndex: 0
         }} />
       <Box
+        alt="Right Band 2"
+        component="img"
+        src={RightBandTwo}
         sx={{
-          bgcolor: '#2054D5',
           height: 140.81,
           left: 828,
-          opacity: 0.25,
           position: 'absolute',
           top: 508,
-          transform: 'rotate(-8deg) scaleY(0.52)',
-          transformOrigin: 'center',
+          transform: 'translate(-110px, 18px)',
           width: 612,
           zIndex: 0
         }} />
       <Box
+        alt="Right Band 3"
+        component="img"
+        src={RightBandThree}
         sx={{
-          bgcolor: '#2054D5',
           height: 116.52,
           left: 1260,
-          opacity: 0.6,
           position: 'absolute',
           top: 541.49,
-          transform: 'rotate(-8deg) scaleY(0.53)',
-          transformOrigin: 'center',
+          transform: 'translate(-250px, 20px)',
           width: 420,
           zIndex: 0
         }} />

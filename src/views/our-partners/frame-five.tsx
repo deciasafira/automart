@@ -37,12 +37,12 @@ const FrameFive: React.FC = () => {
         backgroundColor: '#FFFFFF',
         display: 'flex',
         flexDirection: 'column',
-        gap: '80px',
-        height: '561px',
+        gap: { md: '80px', xs: '40px' },
+        height: { md: '561px', xs: 'auto' },
         overflow: 'hidden',
-        pb: '120px',
-        pt: '80px',
-        px: '144px',
+        pb: { md: '120px', xs: '60px' },
+        pt: { md: '80px', xs: '40px' },
+        px: { md: '144px', xs: '16px' },
         width: '100%'
       }}
     >
@@ -52,17 +52,17 @@ const FrameFive: React.FC = () => {
           alignItems: 'center',
           display: 'flex',
           flexDirection: 'column',
-          gap: '24px',
-          height: '49px',
+          gap: { md: '24px', xs: '12px' },
+          height: { md: '49px', xs: 'auto' },
           textAlign: 'center',
-          width: '700px'
+          width: { md: '700px', xs: '100%' }
         }}
       >
         <Typography
           sx={{
             color: '#1C252E',
             fontFamily: 'Open Sauce One',
-            fontSize: '40px',
+            fontSize: { md: '40px', sm: '32px', xs: '24px' },
             fontWeight: 700,
             lineHeight: '49px'
           }}
@@ -78,10 +78,10 @@ const FrameFive: React.FC = () => {
           display: 'flex',
           flexDirection: 'row',
           flexWrap: 'wrap',
-          gap: '32px',
-          height: '232px',
+          gap: { md: '32px', xs: '16px' },
+          height: { md: '232px', xs: 'auto' },
           justifyContent: 'center',
-          width: '1152px'
+          width: { md: '1152px', xs: '100%' }
         }}
       >
         {mitras.map((partner) => (
@@ -91,8 +91,8 @@ const FrameFive: React.FC = () => {
           key={partner.name}
           src={partner.logo}
           sx={{
-            maxHeight: '100px',
-            maxWidth: '200px',
+            maxHeight: { md: '100px', xs: '50' },
+            maxWidth: { md: '200px', xs: '100px' },
             objectFit: 'contain'
           }} />
         ))}

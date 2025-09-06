@@ -28,7 +28,7 @@ declare global {
 }
 
 // === Constants ===
-const MAP_WIDTH = 1013;
+const MAP_WIDTH = '100%';
 const MAP_HEIGHT = 690;
 const MAP_ZOOM_DEFAULT = 8;
 const MAP_ZOOM_REGION = 9;
@@ -148,15 +148,15 @@ const FrameFour: React.FC = () => {
       component="section"
       sx={{
         display: 'flex',
-        flexDirection: 'row',
-        height: `${MAP_HEIGHT}px`,
+        flexDirection: { md: 'row', xs: 'column' },
+        height: { md: `${MAP_HEIGHT}px`, xs: 'auto' },
         justifyContent: 'space-between',
         overflow: 'hidden',
         width: '100%'
       }}
     >
       {/* === MAP === */}
-      <Box sx={{ height: `${MAP_HEIGHT}px`, width: `${MAP_WIDTH}px` }}>
+      <Box sx={{ flex: '1', height: { md: `${MAP_HEIGHT}px`, xs: '300px' } }}>
         {isLoaded
           ? (
           <GoogleMap
@@ -195,6 +195,7 @@ const FrameFour: React.FC = () => {
                     width: '293px'
                   }}
                 >
+                <Box sx={{ alignItems: 'center', display: 'flex', gap: 1 }}>
                   <Box
                     alt="Distributor Icon"
                     component="img"
@@ -204,7 +205,7 @@ const FrameFour: React.FC = () => {
                     sx={{
                       color: '#1C252E',
                       fontFamily: 'Open Sauce One',
-                      fontSize: '20px',
+                      fontSize: { md: '20px', xs: '14px' },
                       fontWeight: 600,
                       lineHeight: '25px',
                       variant: 'subtitle1'
@@ -212,13 +213,15 @@ const FrameFour: React.FC = () => {
                   >
                     Distributor {selected.name}
                   </Typography>
-                  <Typography sx={{ mb: 1 }} variant="body2">
-                    {selected.address}
-                  </Typography>
+                </Box>
+                <Box>
+                  <Typography sx={{ fontWeight: 600 }}>Alamat:</Typography>
+                  <Typography variant="body2">{selected.address}</Typography>
+                </Box>
                   <Button
                     href={selected.mapsUrl}
                     size="small"
-                    sx={{ bgcolor: '#2044AD' }}
+                    sx={{ bgcolor: '#2044AD', borderRadius: 1 }}
                     target="_blank"
                     variant="contained"
                   >
@@ -243,7 +246,7 @@ const FrameFour: React.FC = () => {
           gap: '24px',
           height: `${MAP_HEIGHT}px`,
           p: '42px 36px',
-          width: '427px'
+          width: { md: '427px', xs: '100%' }
         }}
       >
         <Typography sx={{ font: 'Open Sauce One', fontSize: '32px', fontWeight: 700 }}>

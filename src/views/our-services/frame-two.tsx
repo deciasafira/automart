@@ -63,14 +63,16 @@ const FrameTwo: React.FC = () => {
         <Typography
           sx={{
             color: '#2E2E2E',
-            fontSize: '40px',
+            fontSize: { md: '40px', xs: '16px' },
             fontWeight: 700,
             lineHeight: '100%',
-            mb: { md: 10, xs: 6 }
+            mb: { md: 10, xs: 6 },
+            whiteSpace: { md: 'pre-line', xs: 'normal' }
           }}
           variant="h3"
         >
-          Berbagai solusi untuk mendukung bisnis<br /> bengkel dan toko sparepart Anda.
+          {`Berbagai solusi untuk mendukung bisnis 
+          bengkel dan toko sparepart Anda.`}
         </Typography>
 
         <Grid container spacing={4}>
@@ -96,7 +98,7 @@ const FrameTwo: React.FC = () => {
                 <CardContent sx={{ px: 0 }}>
                   <Typography
                     sx={{
-                      fontSize: 22,
+                      fontSize: { md: '22px', xs: '18px' },
                       fontWeight: 700,
                       mb: 1
                     }}
@@ -106,7 +108,7 @@ const FrameTwo: React.FC = () => {
                   <Typography
                     sx={{
                       color: '#777',
-                      fontSize: 16,
+                      fontSize: { md: '16px', xs: '14px' },
                       lineHeight: 1.5
                     }}
                   >

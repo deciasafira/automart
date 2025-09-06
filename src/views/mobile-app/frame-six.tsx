@@ -16,9 +16,11 @@ const FrameSix: React.FC = () => {
                      url(${backgroundframesix})`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
-        height: '490px',
+        maxWidth: '1440px',
+        minHeight: { md: '490px', xs: '600px' },
         overflow: 'hidden',
         position: 'relative',
+        px: { md: 8, xs: 2 },
         width: '100%'
       }}
     >
@@ -29,19 +31,20 @@ const FrameSix: React.FC = () => {
           flexDirection: 'column',
           gap: '24px',
           left: '80px',
+          maxWidth: '807px',
           position: 'absolute',
-          top: '146px',
-          width: '807px'
+          top: { md: '146px', xs: '100px' },
+          width: '100%'
         }}
       >
-        <Box sx={{ display: 'flex', flexDirection: 'column', gap: '12px', width: '645px' }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', gap: '12px', width: { md: '645px', xs: '100%' } }}>
           <Typography
             sx={{
               color: '#333333',
               fontFamily: 'Open Sauce One',
-              fontSize: '36px',
+              fontSize: { md: '36px', xs: '18px' },
               fontWeight: 700,
-              lineHeight: '45px'
+              lineHeight: { md: '45px', xs: '32px' }
             }}
           >
             Belanja Sparepart Mobil Tanpa<br /> Ribet, Tanpa Perantara!
@@ -50,9 +53,9 @@ const FrameSix: React.FC = () => {
             sx={{
               color: '#606060',
               fontFamily: 'Open Sauce One',
-              fontSize: '18px',
+              fontSize: { md: '18px', xs: '10px' },
               fontWeight: 400,
-              lineHeight: '22px'
+              lineHeight: { md: '22px', xs: '20px' }
             }}
           >
             Download aplikasi Automart
@@ -68,8 +71,8 @@ const FrameSix: React.FC = () => {
             '&:active': { transform: 'scale(0.95)' },
             '&:hover': { transform: 'scale(1.05)' },
             cursor: 'pointer',
-            height: '47px',
-            width: '160px'
+            height: { md: '47.48px', xs: '40px' },
+            width: { md: '160px', xs: '100px' }
           }}
           onClick={() => window.open('https://play.google.com/store', '_blank')} />
       </Box>
@@ -80,13 +83,15 @@ const FrameSix: React.FC = () => {
         component="img"
         src={phoneMockup}
         sx={{
-          boxShadow: 'none',
-          height: '757.35px',
-          left: '806px',
-          position: 'absolute',
-          top: '32px',
-          transform: 'rotate(-10.81deg)',
-          width: '378.67px'
+          height: { md: '757.35', xs: 'auto' },
+          left: { md: '730px', xs: '50px' },
+          maxWidth: { md: '550px', xs: '350px' },
+          mt: { md: 0, xs: 4 },
+          objectFit: 'contain',
+          position: { md: 'absolute', xs: 'relative' },
+          top: { md: '55px', xs: '287px' },
+          transform: { md: 'rotate(-1.81deg)', xs: 'none' },
+          width: '100%'
         }} />
     </Box>
   );

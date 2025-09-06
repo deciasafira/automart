@@ -58,7 +58,7 @@ const FrameThree: React.FC = () => {
           sx={{
             color: '#1C252E',
             fontFamily: 'Open Sauce One',
-            fontSize: '40px',
+            fontSize: { md: '40px', xs: '30px' },
             fontWeight: 700,
             height: '49px',
             lineHeight: '49px',
@@ -71,14 +71,14 @@ const FrameThree: React.FC = () => {
           sx={{
             color: '#2E2E2E',
             fontFamily: 'Open Sauce One',
-            fontSize: '18px',
+            fontSize: { md: '18px', xs: '14px' },
             fontWeight: 400,
-            height: '44px',
+            height: { md: '44px', xs: '24px' },
             lineHeight: '22px',
-            width: '700px'
+            width: { md: '700px', xs: '350px' }
           }}
         >
-          Temukan berbagai sparepart fast moving yang paling banyak dicari bengkel <br /> & toko.
+          Temukan berbagai sparepart fast moving yang paling banyak dicari bengkel & toko.
           Semua tersedia dengan kualitas terjamin dan harga kompetitif.
         </Typography>
       </Box>
@@ -97,7 +97,7 @@ const FrameThree: React.FC = () => {
           m: 0,
           overflowX: 'auto',
           p: 0,
-          width: '1240px'
+          width: '100%'
         }}
       >
         {categories.map((cat, image) => (

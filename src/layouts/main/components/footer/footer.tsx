@@ -1,9 +1,11 @@
-import { Email, Phone, Place } from '@mui/icons-material';
 import { Link, Stack } from '@mui/material';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
 import appStore from '@assets/images/AppStoreButtons.svg';
+import Email from '@assets/images/EnvelopeSimple.svg';
+import Alamat from '@assets/images/MapPin.svg';
+import Telepon from '@assets/images/PhoneCall.svg';
 import playstore from '@assets/images/google-play.svg';
 import Facebook from '@assets/images/layoutDefault/FacebookButton.svg';
 import Instagram from '@assets/images/layoutDefault/InstagramButton.svg';
@@ -21,7 +23,7 @@ const Footer = () => {
         borderTop: '1px solid rgba(145, 158, 171, 0.2)',
         display: 'flex',
         flexDirection: 'column',
-        height: '410px',
+        minHeight: { md: '410px', xs: 'auto' },
         width: '100%'
       }}
     >
@@ -30,16 +32,16 @@ const Footer = () => {
           alignItems: 'flex-start',
           display: 'flex',
           flexDirection: { md: 'row', xs: 'column' },
-          gap: { md: '40px', xs: '80px' },
-          justifyContent: 'space-between',
+          gap: { md: '20px', xs: '80px' },
+          justifyContent: 'center',
           maxWidth: '1440px',
-          px: { md: '40px', xs: '144px' },
+          px: { md: '40px', xs: '20px' },
           py: '80px',
           width: '100%'
         }}
       >
         {/* Company Info */}
-        <Stack spacing={4} sx={{ width: 508 }}>
+        <Stack spacing={4} sx={{ width: { md: 508, xs: '100%' } }}>
           <Box
             sx={{
               alignItems: 'center',
@@ -62,7 +64,7 @@ const Footer = () => {
       sx={{
         color: '#3A68E0',
         fontFamily: 'Helvetica, sans-serif',
-        fontSize: 24,
+        fontSize: { md: 24, xs: 18 },
         fontWeight: 700
       }}
     >
@@ -73,7 +75,7 @@ const Footer = () => {
             sx={{
               color: '#DFE3E8',
               fontFamily: 'Open Sauce One',
-              fontSize: '16px',
+              fontSize: { md: 16, xs: 12 },
               fontWeight: 400,
               lineHeight: '20px'
             }}
@@ -86,7 +88,7 @@ const Footer = () => {
               sx={{
                 color: '#fff',
                 fontFamily: 'Open Sauce One',
-                fontSize: '18px',
+                fontSize: { md: 18, xs: 14 },
                 fontWeight: 600
               }}
             >
@@ -129,7 +131,7 @@ const Footer = () => {
             sx={{
               color: '#fff',
               fontFamily: 'Open Sauce One',
-              fontSize: '18px',
+              fontSize: { md: 18, xs: 14 },
               fontWeight: 600
             }}
           >
@@ -149,7 +151,7 @@ const Footer = () => {
                 '&:hover': { textDecoration: 'underline' },
                 color: '#DFE3E8',
                 fontFamily: 'Open Sauce One',
-                fontSize: '16px',
+                fontSize: { md: 16, xs: 12 },
                 fontWeight: 400
               }}
               underline="none"
@@ -161,9 +163,9 @@ const Footer = () => {
 
         {/* Contact & Social */}
         <Stack
-          alignItems="flex-end"
+          alignItems={{ md: 'flex-end', xs: 'flex-start' }}
           spacing={4}
-          sx={{ width: 'fit-content' }}
+          sx={{ width: 'auto' }}
         >
           {/* Contact */}
           <Stack spacing={2} sx={{ width: '282px' }}>
@@ -171,27 +173,27 @@ const Footer = () => {
               sx={{
                 color: '#fff',
                 fontFamily: 'Open Sauce One',
-                fontSize: '18px',
+                fontSize: { md: 16, xs: 12 },
                 fontWeight: 600
               }}
             >
               Hubungi Kami
             </Typography>
             <Stack alignItems="center" direction="row" spacing={1.25}>
-              <Place sx={{ color: '#fff' }} />
-              <Typography sx={{ color: '#DFE3E8', fontSize: '16px' }}>
+              <img alt="Alamat" src={Alamat} style={{ height: 20, width: 20 }} />
+              <Typography sx={{ color: '#DFE3E8', fontFamily: 'Open Sauce One', fontSize: { md: 16, xs: 12 }, whiteSpace: { md: 'nowrap', xs: 'normal' } }}>
                 Jl. Hegarmanah No. 28, Kota Bandung, 40141
               </Typography>
             </Stack>
             <Stack alignItems="center" direction="row" spacing={1.25}>
-              <Phone sx={{ color: '#fff' }} />
-              <Typography sx={{ color: '#DFE3E8', fontSize: '16px' }}>
+              <img alt="Telepon" src={Telepon} style={{ height: 20, width: 20 }} />
+              <Typography sx={{ color: '#DFE3E8', fontFamily: 'Open Sauce One', fontSize: { md: 16, xs: 12 } }}>
                 +62 851 7435 9728
               </Typography>
             </Stack>
             <Stack alignItems="center" direction="row" spacing={1.25}>
-              <Email sx={{ color: '#fff' }} />
-              <Typography sx={{ color: '#DFE3E8', fontSize: '16px' }}>
+              <img alt="Email" src={Email} style={{ height: 20, width: 20 }} />
+              <Typography sx={{ color: '#DFE3E8', fontFamily: 'Open Sauce One', fontSize: { md: 16, xs: 12 } }}>
                 info@tokorumahan.com
               </Typography>
             </Stack>
@@ -203,7 +205,7 @@ const Footer = () => {
               sx={{
                 color: '#fff',
                 fontFamily: 'Open Sauce One',
-                fontSize: '18px',
+                fontSize: { md: 18, xs: 14 },
                 fontWeight: 600
               }}
             >

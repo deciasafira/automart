@@ -11,12 +11,14 @@ const FrameOne: React.FC = () => {
         alignItems: 'center',
         background: '#2044AD',
         display: 'flex',
-        gap: '80px',
-        height: '544px',
+        flexDirection: { md: 'row', xs: 'column' },
+        gap: { md: '80px', xs: '40px' },
+        height: { md: '544px', xs: 'auto' },
         justifyContent: 'space-between',
         left: '80px',
         overflow: 'hidden',
-        px: '100px',
+        px: { md: '100px', xs: '20px' },
+        py: { md: 0, xs: '40px' },
         width: '100%'
       }}
     >
@@ -45,7 +47,7 @@ const FrameOne: React.FC = () => {
         >
           <Box
             sx={{
-              alignItems: 'flex-start',
+              alignItems: { md: 'flex-start', xs: 'center' },
               display: 'flex',
               flexDirection: 'column',
               gap: '32px',
@@ -87,12 +89,11 @@ const FrameOne: React.FC = () => {
               sx={{
                 color: '#FFFFFF',
                 fontFamily: 'Open Sauce One',
-                fontSize: '40px',
+                fontSize: { md: '40px', sm: '32px', xs: '24px' },
                 fontWeight: 700,
                 height: '147px',
                 lineHeight: '100%',
-                style: 'bold',
-                textAlign: 'justify',
+                textAlign: { md: 'justify', xs: 'center' },
                 width: '548px'
               }}
             >
@@ -104,10 +105,10 @@ const FrameOne: React.FC = () => {
               sx={{
                 color: '#FFFFFF',
                 fontFamily: 'Open Sauce One',
-                fontSize: '18px',
+                fontSize: { md: '18px', xs: '14px' },
                 fontWeight: 400,
                 lineHeight: '22px',
-                textAlign: 'justify',
+                textAlign: { md: 'justify', xs: 'center' },
                 width: '548px'
               }}
             >
@@ -124,9 +125,9 @@ const FrameOne: React.FC = () => {
       {/* Right Content - Image */}
       <Box
         sx={{
-          height: '544px',
+          height: { md: '544px', xs: 'auto' },
           position: 'relative',
-          width: '712px'
+          width: { md: '50%', xs: '100%' }
         }}
       >
         <Box
@@ -134,9 +135,9 @@ const FrameOne: React.FC = () => {
           component="img"
           src={Sparepart}
           sx={{
-            height: '544px',
-            objectFit: 'center',
-            width: '712px'
+            height: { md: '544px', xs: '100%' },
+            objectFit: { md: 'center', xs: 'contain' },
+            width: { md: '712px', xs: '100%' }
           }} />
         <Box
           sx={{
