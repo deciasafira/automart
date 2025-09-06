@@ -30,7 +30,7 @@ const Topbar = ({ onSidebarOpen }: Props) => {
         zIndex: 10
       }}
     >
-      {/* Left side (logo + menu) */}
+      {/* Left Side (logo + menu) */}
       <Box sx={{ alignItems: 'center', display: 'flex', gap: 4 }}>
         {/* Logo */}
         <Box sx={{ alignItems: 'center', display: 'flex', gap: 1 }}>
